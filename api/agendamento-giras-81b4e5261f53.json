@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "agendamento-giras",
+  "private_key_id": "81b4e5261f531d87441dd0753adb4e7b830683e0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDaOvWMrmYt4HnU\nlcQFOeWd4DeZ4A6VG2dV97dx36CiDtp/WqSJyRS9NLbYpcEDeEu2mW9/ZOAXFNu3\noRMONoNmgXWue0TYq3nKYpwJ+FKnUSe89GeXz5FbY1Vn9AM/GuUSxHQS2BwqDB29\n60Tf8ixrzQ0KpYkmsYahtmLInBhv1kLSwLaVgGAh2VQj13dwTXNtoQU8fTB4plNM\ngjDmTl3paK2PKG4L07fipROf66k/yAOuR3RdWYTYybP/ouiGrb9dWLdqeqUmLwhr\nGt//pcvPm/Th0jxUCitjJLdTTy3qulcfSg46wMBGEXFpwBYksckbZ5mwPbeTQL65\ndsDMFVZvAgMBAAECggEATVJLk0ttl76r2/cui11+rmf1u1cIQ6uAexS4kifWfeT+\nZNZEay9sYjeNu4hLMYQLa4jE2SHwRi1VRiRToJsPBqBDBo3VkGF9VwiGWf/6pR7b\nkhcUp1Tbn0I8TgdGqTLJzFL//3dDz2AYn6R+9EwVkiKGhumtBSEsXxrEuGiaPfFI\njY+OeClQDX9lTH2oSlan7noIjUJKGd3Cj0FdCSOTMgWyBb9Im2z5WkDEC6a7/irv\nV3V8GjXJmNB8jZmXfKARl2QX3cs0itZq7jbReTJ7vgLprRmNzJOKbspw7mnya7eJ\nBDr9ecJ8S75M9u1GA0Ca5exBxQKC6YTT3HdHgLeV/QKBgQDzfJw/ngu0XflRX3iS\ncCw+seCTO1oNIQNhUB71YvB6mtreBM9Q16KOENwt1vp2/F7gkvtM7jf13Ifm5Fwi\nx1uJ43EBR1W7q2d1Q1LAsQVCizvoQL/3dWyTY1Ll/TIJHHdTb4TwwQe/7DY0f4Ri\nS29vMM+wnWmhOcuEyjnU71FwywKBgQDlchEgghmLKVu8+1GHic6pKKHpeIgMjtgs\nbB/NTH1o05Ap+4ZUAWwWaGzuch6HSu+VcJvcu9vmnUn7puzdXvhERC31UkHz+Bv6\nL4eFUDnlgtswKAGSuvraGC+H9RHlFLXZ3eiQG6S57CSC+BxZTVwD4m7yJkR62cRH\n0SONwr7wbQKBgHa2rbOyygAhxVowUygKuvfCYD1Itcoq62v51W5M0/TjJY0UCURg\nLmhXvhI3e5yhxVx3LUE/8FbWNAiWFHn8exwKoWE/N4StuF6K+YDrjiX4nrfJQg9T\n2CEwTw3FWizpDSDIAagkZTPk5jTIa3JFV0p+IPT6erLZ6+mNc47nM+zrAoGAf/nR\nh7pJGQ+mdZAP93Nr63oYZSqvZ6G8/XoJeu7w/CkUvfXnBLAOY6k3KQBJ+thXLZkz\ntjip/MU6YLzIXOj9vMXyhGSvGK8Im9Eq27bVtCf6ra+CwR69kCvxRvnwUz/r9msJ\nrmdcx77o1owg88ZsTlZb34BsrcEM86m5FPbMnTkCgYBxAc6E89LTt3HGlhLCWqJC\nA8OxxH9AHPZmo4Ih00C7+WetBxp5cGojC7Y7+1EEmMtfbHESRrCm3wfHeu5RwkMh\ncmXRElBVp/ChKr7J0GIUXkLZBrc0zdM6MfxnhyO/Zs6wdDFD+oFlIjfCrND+dpej\nTWgr7g6QUoW7z7zdBLAMuw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "api-agendamento@agendamento-giras.iam.gserviceaccount.com",
+  "client_id": "101759390718514032834",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/api-agendamento%40agendamento-giras.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
