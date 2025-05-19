@@ -19,14 +19,14 @@ app.get("/giras", async (req, res) => {
 });
 
 app.post("/agendamento", async (req, res) => {
-  const { id, usuario_id, gira_id, data_agendamento, status } = req.body;
+  const { id, usuario_id, gira_id, data_agendamento, status, telefone } = req.body;
 
-  if (!id || !usuario_id || !gira_id || !data_agendamento || !status) {
+  if (!id || !usuario_id || !gira_id || !data_agendamento || !status || !telefone) {
     return res.status(400).json({ error: "Dados incompletos" });
   }
 
   try {
-    await addAgendamento({ id, usuario_id, gira_id, data_agendamento, status });
+    await addAgendamento({ id, usuario_id, gira_id, data_agendamento, status, telefone });
     res.json({ message: "Agendamento criado com sucesso" });
   } catch (error) {
     res.status(500).json({ error: "Erro ao criar agendamento" });
