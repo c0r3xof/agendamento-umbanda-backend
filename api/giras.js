@@ -17,7 +17,7 @@ export default async function handler(req, res) {
   try {
     const auth = getAuth();
     const sheets = google.sheets({ version: 'v4', auth });
-    const spreadsheetId = 'COLE_AQUI_ID_DA_SUA_PLANILHA';
+    const spreadsheetId = '1O0Zjo4OG3ydGtdlyWtdF3Z9eJp6WrQ2rC8IemNaLngI';
 
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId,
