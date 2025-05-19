@@ -1,55 +1,28 @@
-const { google } = require("googleapis");
+const { GoogleSpreadsheet } = require("google-spreadsheet");
+const creds = require("./credentials.json");
 
-const SPREADSHEET_ID = process.env.SPREADSHEET_ID;
+const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID);
 
-const serviceAccount = JSON.parse(process.env.SERVICE_ACCOUNT);
-
-const auth = new google.auth.GoogleAuth({
-  credentials: serviceAccount,
-  scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-});
-
-const sheets = google.sheets({ version: "v4", auth });
+async function acessarPlanilha() {
+  await doc.useServiceAccountAuth(creds);
+  await doc.loadInfo();
+}
 
 async function getGiras() {
-  const response = await sheets.spreadsheets.values.get({
-    spreadsheetId: SPREADSHEET_ID,
-    range: "Giras!A2:F",
-  });
-
-  const rows = response.data.values || [];
-  return rows.map(([id, nome, descricao, data, tipo, status]) => ({
-    id,
-    nome,
-    descricao,
-    data,
-    tipo,
-    status,
+  await acessarPlanilha();
+  const sheet = doc.sheetsByIndex[0];
+  const rows = await sheet.getRows();
+  return rows.map(row => ({
+    id: row.id,
+    nome: row.nome,
+    data: row.data,
   }));
 }
 
-async function addAgendamento(agendamento) {
-  const values = [
-    [
-      agendamento.id,
-      agendamento.usuario_id,
-      agendamento.gira_id,
-      agendamento.data_agendamento,
-      agendamento.status,
-    ],
-  ];
-
-  const resource = { values };
-
-  await sheets.spreadsheets.values.append({
-    spreadsheetId: SPREADSHEET_ID,
-    range: "Agendamentos!A:E",
-    valueInputOption: "USER_ENTERED",
-    resource,
-  });
+async function addAgendamento({ id, usuario_id, gira_id, data_agendamento, status, telefone }) {
+  await acessarPlanilha();
+  const sheet = doc.sheetsByIndex[1];
+  await sheet.addRow({ id, usuario_id, gira_id, data_agendamento, status, telefone });
 }
 
-module.exports = {
-  getGiras,
-  addAgendamento,
-};
+module.exports = { getGiras, addAgendamento };
