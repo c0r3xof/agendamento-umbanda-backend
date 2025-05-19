@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agendamento de Giras</title>
+</head>
+<body>
+  <h1>Agendamento</h1>
+  <form id="form">
+    <input type="text" id="nome" placeholder="Nome" required />
+    <input type="text" id="telefone" placeholder="Telefone" required />
+    <input type="date" id="data" required />
+    <button type="submit">Agendar</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const nome = document.getElementById('nome').value;
+      const telefone = document.getElementById('telefone').value;
+      const data = document.getElementById('data').value;
+
+      const response = await fetch('/api/agendar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome, telefone, data }),
+      });
+
+      const result = await response.json();
+      alert(result.message || result.error);
+    });
+  </script>
+</body>
+</html>
